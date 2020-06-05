@@ -1,0 +1,10 @@
+// Color variables
+$colors: (
+	primary: black,
+	secondary: white,
+);
+
+// Function: getter for color
+@function color($color-name) {
+	@return map-get($colors, $color-name);
+}
