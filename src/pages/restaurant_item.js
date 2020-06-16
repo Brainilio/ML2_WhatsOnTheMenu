@@ -4,12 +4,12 @@ const Item = (props) => {
 	return (
 		<div className='restaurant-item-card'>
 			<span className='item_name'>
-				<strong>Spare Ribs</strong>
+				<strong>{props.name}</strong>
 			</span>
 			<span className='item_ingredient'>
-				Ingredienten: Varkensvlees, BBQ_Saus
+				Ingredienten: {props.ingredients.map((ingredient) => ` ${ingredient} `)}
 			</span>
-			<span className='item_price'>Prijs: $8,00</span>
+			<span className='item_price'>Prijs: ${props.price}</span>
 		</div>
 	)
 }

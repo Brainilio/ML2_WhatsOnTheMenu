@@ -23,12 +23,12 @@ const Restaurant = (props) => {
 			</ul>
 			<hr className='solid' />
 			<div className='restaurant-items-wrapper'>
-				<Item name='name' ingredients={["HI", "hi", "hi"]} prijs={1.8} />
-				<Item name='name' ingredients={["HI", "hi", "hi"]} prijs={1.8} />
-				<Item name='name' ingredients={["HI", "hi", "hi"]} prijs={1.8} />
-				<Item name='name' ingredients={["HI", "hi", "hi"]} prijs={1.8} />
-				<Item name='name' ingredients={["HI", "hi", "hi"]} prijs={1.8} />
-				<Item name='name' ingredients={["HI", "hi", "hi"]} prijs={1.8} />
+				<Item name='name' ingredients={["HI", "hi", "hi"]} price={1.8} />
+				<Item name='name' ingredients={["HI", "hi", "hi"]} price={1.8} />
+				<Item name='name' ingredients={["HI", "hi", "hi"]} price={1.8} />
+				<Item name='name' ingredients={["HI", "hi", "hi"]} price={1.8} />
+				<Item name='name' ingredients={["HI", "hi", "hi"]} price={1.8} />
+				<Item name='name' ingredients={["HI", "hi", "hi"]} price={1.8} />
 			</div>
 		</>
 	)
