@@ -15,7 +15,7 @@ class Restaurants extends Component {
 					"Goede inrichting",
 					"Contrast in Kleuren",
 					"Werknemers goed ingelicht",
-					"Minimale obstakels"
+					"Minimale obstakels",
 				],
 				rating: 4,
 				categories: [
@@ -26,45 +26,45 @@ class Restaurants extends Component {
 								{
 									name: "Spareribs",
 									price: 8.0,
-									ingredients: ["Varkensvlees", "BBQ Saus"]
+									ingredients: ["Varkensvlees", "BBQ Saus"],
 								},
 								{
 									name: "Pizza",
 									price: 8.0,
-									ingredients: ["Varkensvlees", "BBQ Saus"]
+									ingredients: ["Varkensvlees", "BBQ Saus"],
 								},
 								{
 									name: "Hamburger",
 									price: 8.0,
-									ingredients: ["Varkensvlees", "BBQ Saus"]
+									ingredients: ["Varkensvlees", "BBQ Saus"],
 								},
 								{
 									name: "Carpaccio",
 									price: 8.0,
-									ingredients: ["Varkensvlees", "BBQ Saus"]
-								}
-							]
-						}
+									ingredients: ["Varkensvlees", "BBQ Saus"],
+								},
+							],
+						},
 					],
 					[
 						{
 							name: "Hoofdgerecht",
-							items: [{}]
-						}
+							items: [{}],
+						},
 					],
 					[
 						{
 							name: "Desert",
-							items: [{}]
-						}
+							items: [{}],
+						},
 					],
 					[
 						{
 							name: "Drinken",
-							items: [{}]
-						}
-					]
-				]
+							items: [{}],
+						},
+					],
+				],
 			},
 			{
 				id: 2,
@@ -74,7 +74,7 @@ class Restaurants extends Component {
 					"Opstapjes",
 					"Goede inrichting",
 					"Contrast in Kleuren",
-					"Werknemers goed ingelicht"
+					"Werknemers goed ingelicht",
 				],
 				rating: 4,
 				categories: [
@@ -85,52 +85,52 @@ class Restaurants extends Component {
 								{
 									name: "Spareribs",
 									price: 8.0,
-									ingredients: ["Varkensvlees", "BBQ Saus"]
+									ingredients: ["Varkensvlees", "BBQ Saus"],
 								},
 								{
 									name: "Pizza",
 									price: 8.0,
-									ingredients: ["Varkensvlees", "BBQ Saus"]
+									ingredients: ["Varkensvlees", "BBQ Saus"],
 								},
 								{
 									name: "Hamburger",
 									price: 8.0,
-									ingredients: ["Varkensvlees", "BBQ Saus"]
+									ingredients: ["Varkensvlees", "BBQ Saus"],
 								},
 								{
 									name: "Carpaccio",
 									price: 8.0,
-									ingredients: ["Varkensvlees", "BBQ Saus"]
-								}
-							]
-						}
+									ingredients: ["Varkensvlees", "BBQ Saus"],
+								},
+							],
+						},
 					],
 					[
 						{
 							name: "Hoofdgerecht",
-							items: [{}]
-						}
+							items: [{}],
+						},
 					],
 					[
 						{
 							name: "Desert",
-							items: [{}]
-						}
+							items: [{}],
+						},
 					],
 					[
 						{
 							name: "Drinken",
-							items: [{}]
-						}
-					]
-				]
-			}
-		]
+							items: [{}],
+						},
+					],
+				],
+			},
+		],
 	}
 
 	onSearch = (e) => {
 		this.setState({
-			search: e.target.value.substr(0, 10)
+			search: e.target.value.substr(0, 10),
 		})
 	}
 

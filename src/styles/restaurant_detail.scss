@@ -1,0 +1,43 @@
+.restaurant-header {
+	font-size: 40px;
+	text-align: center;
+}
+
+.restaurant-items-wrapper {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column;
+
+	.restaurant-item-card {
+		position: relative;
+		width: 55%;
+		height: 120px;
+		border: 1px solid black;
+		font-size: 25px;
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		flex-flow: column;
+		margin-top: 1em;
+		margin-bottom: 1em;
+
+		.item_name {
+			margin-top: 8px;
+			margin-left: 8px;
+		}
+		.item_ingredient {
+			position: absolute;
+			margin-bottom: 8px;
+			margin-left: 8px;
+			bottom: 0;
+		}
+		.item_price {
+			align-self: flex-end;
+			margin-bottom: 8px;
+			margin-right: 8px;
+		}
+	}
+}
