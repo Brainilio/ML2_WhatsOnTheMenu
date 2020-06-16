@@ -2,7 +2,7 @@ import React from "react"
 import { NavLink } from "react-router-dom"
 
 const RestaurantCard = (props) => {
-	console.log(props.entireRestaurant.id)
+	// console.log(props.entireRestaurant.id)
 
 	let stars = []
 	for (let i = 0; i < props.rating; i++) {
@@ -27,7 +27,7 @@ const RestaurantCard = (props) => {
 					{props.options.map((option) => {
 						return (
 							<li>
-								<span class='material-icons'>check</span>
+								<span className='material-icons'>check</span>
 								{option}
 							</li>
 						)

@@ -35,6 +35,26 @@ hr.solid {
 	margin-bottom: 2rem;
 }
 
+.searchRestaurant {
+	position: relative;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	input {
+		width: 35%;
+		height: 40px;
+		font-size: 25px;
+	}
+
+	i {
+		position: absolute;
+		margin-left: 17em;
+		font-size: 40px;
+	}
+}
+
 .restaurantsWrapper {
 	display: flex;
 	justify-content: center;

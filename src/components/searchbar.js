@@ -23,7 +23,11 @@ class Searchbar extends Component {
 					<button className='locationButton'>
 						<i className='material-icons'>location_on</i>
 					</button>
-					<input type='text' onChange={this.addPostCode} />
+					<input
+						type='text'
+						placeholder='&nbsp; Bijvoorbeeld 3028 PX.. of Rotterdam'
+						onChange={this.addPostCode}
+					/>
 					<NavLink
 						to={{
 							pathname: "/restaurants",

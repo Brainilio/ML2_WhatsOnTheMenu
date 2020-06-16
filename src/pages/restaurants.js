@@ -4,6 +4,7 @@ import RestaurantCard from "../components/restaurantCard"
 class Restaurants extends Component {
 	state = {
 		postcode: "3021PX",
+		search: "",
 		restaurants: [
 			{
 				id: 1,
@@ -64,12 +65,103 @@ class Restaurants extends Component {
 						}
 					]
 				]
+			},
+			{
+				id: 2,
+				name: "Vapiano",
+				tags: ["Pizza, ", "Italiaans, ", "Pasta "],
+				accessibility: [
+					"Opstapjes",
+					"Goede inrichting",
+					"Contrast in Kleuren",
+					"Werknemers goed ingelicht"
+				],
+				rating: 4,
+				categories: [
+					[
+						{
+							name: "Voorgerecht",
+							items: [
+								{
+									name: "Spareribs",
+									price: 8.0,
+									ingredients: ["Varkensvlees", "BBQ Saus"]
+								},
+								{
+									name: "Pizza",
+									price: 8.0,
+									ingredients: ["Varkensvlees", "BBQ Saus"]
+								},
+								{
+									name: "Hamburger",
+									price: 8.0,
+									ingredients: ["Varkensvlees", "BBQ Saus"]
+								},
+								{
+									name: "Carpaccio",
+									price: 8.0,
+									ingredients: ["Varkensvlees", "BBQ Saus"]
+								}
+							]
+						}
+					],
+					[
+						{
+							name: "Hoofdgerecht",
+							items: [{}]
+						}
+					],
+					[
+						{
+							name: "Desert",
+							items: [{}]
+						}
+					],
+					[
+						{
+							name: "Drinken",
+							items: [{}]
+						}
+					]
+				]
 			}
 		]
 	}
 
+	onSearch = (e) => {
+		this.setState({
+			search: e.target.value.substr(0, 10)
+		})
+	}
+
 	render() {
 		let singleRestaurantcard = null
+
+		// let filteredRestaurant = this.state.restaurants.filter((restaurant) => {
+		// 	// let searchableContent = [
+		// 	// 	restaurant.tags.map((tag) => tag),
+		// 	// 	restaurant.name,
+		// 	// 	restaurant.accessibility
+		// 	// ]
+
+		// 	return restaurant.name.toLowerCase().indexOf(this.state.search) !== -1
+		// })
+
+		console.log(singleRestaurantcard)
+
+		// for (const restaurant of this.state.restaurants) {
+		// 	singleRestaurantcard = (
+		// 		<RestaurantCard
+		// 			key={restaurant.id}
+		// 			entireRestaurant={restaurant}
+		// 			name={restaurant.name}
+		// 			options={restaurant.accessibility}
+		// 			rating={restaurant.rating}
+		// 			tags={restaurant.tags}
+		// 		/>
+		// 	)
+		// 	console.log(singleRestaurantcard)
+		// }
 
 		this.state.restaurants.map(
 			(restaurant) =>
@@ -109,7 +201,16 @@ class Restaurants extends Component {
 					</li>
 				</ul>
 
-				<hr class='solid' />
+				<hr className='solid' />
+
+				<div className='searchRestaurant'>
+					<input
+						type='text'
+						placeholder='&nbsp; Zoek naar jouw restaurant..'
+						onChange={this.onSearch}
+					/>
+					<i className='material-icons'>search</i>
+				</div>
 
 				<div className='restaurantsWrapper'>{singleRestaurantcard}</div>
 			</div>
