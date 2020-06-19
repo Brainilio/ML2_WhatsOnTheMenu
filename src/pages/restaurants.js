@@ -18,53 +18,7 @@ class Restaurants extends Component {
 					"Minimale obstakels",
 				],
 				rating: 4,
-				categories: [
-					[
-						{
-							name: "Voorgerecht",
-							items: [
-								{
-									name: "Spareribs",
-									price: 8.0,
-									ingredients: ["Varkensvlees", "BBQ Saus"],
-								},
-								{
-									name: "Pizza",
-									price: 8.0,
-									ingredients: ["Varkensvlees", "BBQ Saus"],
-								},
-								{
-									name: "Hamburger",
-									price: 8.0,
-									ingredients: ["Varkensvlees", "BBQ Saus"],
-								},
-								{
-									name: "Carpaccio",
-									price: 8.0,
-									ingredients: ["Varkensvlees", "BBQ Saus"],
-								},
-							],
-						},
-					],
-					[
-						{
-							name: "Hoofdgerecht",
-							items: [{}],
-						},
-					],
-					[
-						{
-							name: "Desert",
-							items: [{}],
-						},
-					],
-					[
-						{
-							name: "Drinken",
-							items: [{}],
-						},
-					],
-				],
+				categories: [{}, {}, {}, {}],
 			},
 			{
 				id: 2,
@@ -77,53 +31,7 @@ class Restaurants extends Component {
 					"Werknemers goed ingelicht",
 				],
 				rating: 4,
-				categories: [
-					[
-						{
-							name: "Voorgerecht",
-							items: [
-								{
-									name: "Spareribs",
-									price: 8.0,
-									ingredients: ["Varkensvlees", "BBQ Saus"],
-								},
-								{
-									name: "Pizza",
-									price: 8.0,
-									ingredients: ["Varkensvlees", "BBQ Saus"],
-								},
-								{
-									name: "Hamburger",
-									price: 8.0,
-									ingredients: ["Varkensvlees", "BBQ Saus"],
-								},
-								{
-									name: "Carpaccio",
-									price: 8.0,
-									ingredients: ["Varkensvlees", "BBQ Saus"],
-								},
-							],
-						},
-					],
-					[
-						{
-							name: "Hoofdgerecht",
-							items: [{}],
-						},
-					],
-					[
-						{
-							name: "Desert",
-							items: [{}],
-						},
-					],
-					[
-						{
-							name: "Drinken",
-							items: [{}],
-						},
-					],
-				],
+				categories: [{}, {}, {}, {}],
 			},
 		],
 	}
@@ -137,17 +45,17 @@ class Restaurants extends Component {
 	render() {
 		let singleRestaurantcard = null
 
-		// let filteredRestaurant = this.state.restaurants.filter((restaurant) => {
-		// 	// let searchableContent = [
-		// 	// 	restaurant.tags.map((tag) => tag),
-		// 	// 	restaurant.name,
-		// 	// 	restaurant.accessibility
-		// 	// ]
+		let filteredRestaurant = this.state.restaurants.filter((restaurant) => {
+			// let searchableContent = [
+			// 	restaurant.tags.map((tag) => tag),
+			// 	restaurant.name,
+			// 	restaurant.accessibility
+			// ]
 
-		// 	return restaurant.name.toLowerCase().indexOf(this.state.search) !== -1
-		// })
+			return restaurant.name.toLowerCase().indexOf(this.state.search) !== -1
+		})
 
-		console.log(singleRestaurantcard)
+		// console.log(singleRestaurantcard)
 
 		// for (const restaurant of this.state.restaurants) {
 		// 	singleRestaurantcard = (
@@ -162,20 +70,34 @@ class Restaurants extends Component {
 		// 	)
 		// 	console.log(singleRestaurantcard)
 		// }
+		this.state.restaurants.map((restaurant, index) => {
+			singleRestaurantcard = (
+				<RestaurantCard
+					key={index}
+					entireRestaurant={restaurant}
+					name={restaurant.name}
+					options={restaurant.accessibility}
+					rating={restaurant.rating}
+					tags={restaurant.tags}
+				/>
+			)
+		})
 
-		this.state.restaurants.map(
-			(restaurant) =>
-				(singleRestaurantcard = (
-					<RestaurantCard
-						key={restaurant.id}
-						entireRestaurant={restaurant}
-						name={restaurant.name}
-						options={restaurant.accessibility}
-						rating={restaurant.rating}
-						tags={restaurant.tags}
-					/>
-				))
-		)
+		console.log(singleRestaurantcard)
+
+		// this.state.restaurants.map(
+		// 	(restaurant, index) =>
+		// 		(singleRestaurantcard = (
+		// 			<RestaurantCard
+		// 				key={index}
+		// 				entireRestaurant={restaurant}
+		// 				name={restaurant.name}
+		// 				options={restaurant.accessibility}
+		// 				rating={restaurant.rating}
+		// 				tags={restaurant.tags}
+		// 			/>
+		// 		))
+		// )
 
 		return (
 			<div>

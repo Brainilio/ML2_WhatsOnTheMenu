@@ -2,7 +2,7 @@ import React from "react"
 import { NavLink } from "react-router-dom"
 
 const RestaurantCard = (props) => {
-	// console.log(props.entireRestaurant.id)
+	console.log(props.entireRestaurant.id)
 
 	let stars = []
 	for (let i = 0; i < props.rating; i++) {
@@ -27,7 +27,12 @@ const RestaurantCard = (props) => {
 					{props.options.map((option) => {
 						return (
 							<li>
-								<span className='material-icons'>check</span>
+								<i
+									style={{ fontSize: 40, textAlign: "center" }}
+									className='material-icons'
+								>
+									check
+								</i>{" "}
 								{option}
 							</li>
 						)
@@ -37,7 +42,7 @@ const RestaurantCard = (props) => {
 				<NavLink
 					to={{
 						pathname: `/restaurant/${props.entireRestaurant.id}`,
-						state: props.entireRestaurant
+						state: props.entireRestaurant,
 					}}
 				>
 					<div className='restaurant-card-footer'>
