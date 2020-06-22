@@ -12,7 +12,7 @@ const Restaurant = (props) => {
 
 	return (
 		<>
-			<h1 className='restaurant-header'>{items.name}</h1>
+			<p className='restaurant-header'>{items.name}</p>
 			<ul className='restaurants-list-filter'>
 				<li>
 					<strong>Voorgerechten</strong>
@@ -23,12 +23,36 @@ const Restaurant = (props) => {
 			</ul>
 			<hr className='solid' />
 			<div className='restaurant-items-wrapper'>
-				<Item name='name' ingredients={["HI", "hi", "hi"]} price={1.8} />
-				<Item name='name' ingredients={["HI", "hi", "hi"]} price={1.8} />
-				<Item name='name' ingredients={["HI", "hi", "hi"]} price={1.8} />
-				<Item name='name' ingredients={["HI", "hi", "hi"]} price={1.8} />
-				<Item name='name' ingredients={["HI", "hi", "hi"]} price={1.8} />
-				<Item name='name' ingredients={["HI", "hi", "hi"]} price={1.8} />
+				<Item
+					name='Pizza Quatro Formaggio'
+					ingredients={["Kaas", "Gluten", "Tomaat"]}
+					price={10}
+				/>
+				<Item
+					name='Pasta Bolognaise'
+					ingredients={["Tomaat", "Gluten", "Vlees"]}
+					price={12}
+				/>
+				<Item
+					name='Pasta Carbonara'
+					ingredients={["Varkensvlees", "Gluten", "Kaas"]}
+					price={10}
+				/>
+				<Item
+					name='Pizza Tuna'
+					ingredients={["Vis", "Gluten", "Kaas"]}
+					price={10}
+				/>
+				<Item
+					name='Pizza Pepperoni'
+					ingredients={["Vlees", "Tomatensaus", "Gluten"]}
+					price={12}
+				/>
+				<Item
+					name='Pizza Mozarella'
+					ingredients={["Kaas", "Tomatensaus", "Gluten"]}
+					price={8}
+				/>
 			</div>
 		</>
 	)

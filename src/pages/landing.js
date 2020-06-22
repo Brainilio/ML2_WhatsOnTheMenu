@@ -4,9 +4,9 @@ import SearchBar from "../components/searchbar"
 const Landing = () => {
 	return (
 		<div className='landingWrapper'>
-			<h1>What's on the Menu?</h1>
+			<span className='landing-title'>What's on the Menu?</span>
 			<SearchBar />
-			<h1>Over ons</h1>
+			<span className='about-title'>Over ons</span>
 			<div className='aboutWrapper'>
 				<p>
 					What's on the menu is een applicatie speciaal ontwikkeld voor mensen

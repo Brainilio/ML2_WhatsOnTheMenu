@@ -17,7 +17,7 @@ class Restaurants extends Component {
 					"Werknemers goed ingelicht",
 					"Minimale obstakels",
 				],
-				rating: 4,
+				rating: 5,
 				categories: [{}, {}, {}, {}],
 			},
 			{
@@ -33,6 +33,14 @@ class Restaurants extends Component {
 				rating: 4,
 				categories: [{}, {}, {}, {}],
 			},
+			{
+				id: 1,
+				name: "Rodizio Steakhouse",
+				tags: ["All You Can Eat, ", "Barbecue, ", "Vlees "],
+				accessibility: ["Opstapjes", "Goede inrichting"],
+				rating: 2,
+				categories: [{}, {}, {}, {}],
+			},
 		],
 	}
 
@@ -43,35 +51,14 @@ class Restaurants extends Component {
 	}
 
 	render() {
-		let singleRestaurantcard = null
+		let singleRestaurantcard = []
 
 		let filteredRestaurant = this.state.restaurants.filter((restaurant) => {
-			// let searchableContent = [
-			// 	restaurant.tags.map((tag) => tag),
-			// 	restaurant.name,
-			// 	restaurant.accessibility
-			// ]
-
 			return restaurant.name.toLowerCase().indexOf(this.state.search) !== -1
 		})
 
-		// console.log(singleRestaurantcard)
-
-		// for (const restaurant of this.state.restaurants) {
-		// 	singleRestaurantcard = (
-		// 		<RestaurantCard
-		// 			key={restaurant.id}
-		// 			entireRestaurant={restaurant}
-		// 			name={restaurant.name}
-		// 			options={restaurant.accessibility}
-		// 			rating={restaurant.rating}
-		// 			tags={restaurant.tags}
-		// 		/>
-		// 	)
-		// 	console.log(singleRestaurantcard)
-		// }
 		this.state.restaurants.map((restaurant, index) => {
-			singleRestaurantcard = (
+			singleRestaurantcard.push(
 				<RestaurantCard
 					key={index}
 					entireRestaurant={restaurant}
@@ -83,26 +70,10 @@ class Restaurants extends Component {
 			)
 		})
 
-		console.log(singleRestaurantcard)
-
-		// this.state.restaurants.map(
-		// 	(restaurant, index) =>
-		// 		(singleRestaurantcard = (
-		// 			<RestaurantCard
-		// 				key={index}
-		// 				entireRestaurant={restaurant}
-		// 				name={restaurant.name}
-		// 				options={restaurant.accessibility}
-		// 				rating={restaurant.rating}
-		// 				tags={restaurant.tags}
-		// 			/>
-		// 		))
-		// )
-
 		return (
 			<div>
 				<div className='restaurants-list-title'>
-					<h1>Restaurants</h1>
+					<span className='restaurants-list-title-header'>Restaurants</span>
 					<span>{this.state.postcode}</span>
 				</div>
 

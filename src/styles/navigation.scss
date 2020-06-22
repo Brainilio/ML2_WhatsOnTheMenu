@@ -1,36 +1,33 @@
-@import './colors.scss';
+@import "./colors.scss";
 
-.header-nav { 
-    background-color: black; 
-    display: flex; 
-    align-items: center;
-    justify-content: space-between;
-    height: 10vh;
+.header-nav {
+	background-color: black;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 10vh;
 
-    h3 { 
-        color: white; 
-        font-size: 35px; 
-        text-transform: uppercase;
-        margin-left: 2em;
-    }
+	.header-title {
+		color: color(secondary);
+		font-size: 28px;
+		margin-left: 10em;
+	}
 
+	// Active class span
+	.header-nav-logo {
+		color: color(secondary);
+	}
 
+	// Header links (ul)
+	.header-nav-links {
+		color: color(secondary);
+		text-decoration: none;
+		list-style: none;
+		font-size: 18px;
+		margin-right: 10em;
 
-    // Active class h3
-    .header-nav-logo { 
-        color: white; 
-    }
-
-    // Header links (ul)
-    .header-nav-links { 
-        color: white; 
-        text-decoration: none;
-        list-style: none;
-        font-size: 25px; 
-        margin-right: 2em;
-         
-        a { 
-            color: white; 
-        }
-    }
+		a {
+			color: color(secondary);
+		}
+	}
 }

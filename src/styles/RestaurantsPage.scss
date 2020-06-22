@@ -1,14 +1,18 @@
+@import "./variables/colors.scss";
+
 .restaurants-list-title {
 	display: flex;
 	text-align: center;
 	flex-direction: column;
 	margin: 2em;
-	h1 {
-		font-size: 55px;
+
+	span.restaurants-list-title-header {
+		font-size: 40px;
+		color: color(secondary);
 	}
 	span {
-		margin-top: -35px;
-		font-size: 25px;
+		font-size: 28px;
+		color: color(secondary);
 	}
 }
 
@@ -17,15 +21,16 @@
 	list-style: none;
 	justify-content: space-evenly;
 	margin-top: 4em;
+	color: color(secondary);
 
 	li {
-		font-size: 25px;
+		font-size: 20px;
 		cursor: pointer;
 		transition: background ease-in 0.3s, color 0.3s;
 
 		&:hover {
-			background: rgb(0, 0, 0);
-			color: white;
+			background: color(secondary);
+			color: color(primary);
 		}
 	}
 }

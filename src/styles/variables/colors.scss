@@ -1,0 +1,15 @@
+// Color variables
+
+$colors: (
+	primary: #2e2e2e,
+	secondary: #ffffff,
+	accent: rgb(0, 0, 0),
+	button-text: #000000,
+	button-border: #4d4d4d,
+	button-hover: #d7d8d4,
+);
+
+// Function: getter for color
+@function color($color-name) {
+	@return map-get($colors, $color-name);
+}

@@ -4,10 +4,14 @@
 @import "./restaurantcard.scss";
 @import "./RestaurantsPage.scss";
 @import "./restaurant_detail.scss";
+@import "./variables/colors.scss";
 
 body {
 	margin: 0;
 	padding: 0;
+	background-color: color(primary);
 	box-sizing: border-box;
 	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
+
+// Font-sizes: 40px, 28px, 20px, 18px

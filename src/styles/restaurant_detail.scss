@@ -1,6 +1,9 @@
+@import "./variables/colors.scss";
+
 .restaurant-header {
 	font-size: 40px;
 	text-align: center;
+	color: color(secondary);
 }
 
 .restaurant-items-wrapper {
@@ -16,13 +19,14 @@
 		width: 55%;
 		height: 120px;
 		border: 1px solid black;
-		font-size: 25px;
+		font-size: 20px;
 		display: flex;
 		justify-content: space-between;
 		align-items: flex-start;
 		flex-flow: column;
 		margin-top: 1em;
 		margin-bottom: 1em;
+		background-color: color(secondary);
 
 		.item_name {
 			margin-top: 8px;

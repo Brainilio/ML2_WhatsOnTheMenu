@@ -14,7 +14,7 @@ const RestaurantCard = (props) => {
 			<div className='restaurant-card-content-wrapper'>
 				<div className='restaurant-card-header'>
 					<div className='restaurant-card-title'>
-						<h2>{props.name}</h2>
+						<h2 className='restaurant-card-title-name'>{props.name}</h2>
 						<span className='restaurant-card-tags'>{props.tags}</span>
 					</div>
 					<div className='restaurant-card-rating'>
@@ -28,7 +28,7 @@ const RestaurantCard = (props) => {
 						return (
 							<li>
 								<i
-									style={{ fontSize: 40, textAlign: "center" }}
+									style={{ fontSize: 28, textAlign: "center" }}
 									className='material-icons'
 								>
 									check
