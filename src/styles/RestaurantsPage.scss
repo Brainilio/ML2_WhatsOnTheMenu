@@ -1,4 +1,5 @@
 @import "./variables/colors.scss";
+@import "./responsive/breakpoints.scss";
 
 .restaurants-list-title {
 	display: flex;
@@ -6,13 +7,25 @@
 	flex-direction: column;
 	margin: 2em;
 
+	@include screenxxs {
+		margin-top: 2em;
+	}
+
 	span.restaurants-list-title-header {
 		font-size: 40px;
 		color: color(secondary);
+
+		@include screenxxs {
+			font-size: 28px;
+		}
 	}
 	span {
 		font-size: 28px;
 		color: color(secondary);
+
+		@include screenxxs {
+			font-size: 18px;
+		}
 	}
 }
 
@@ -22,6 +35,10 @@
 	justify-content: space-evenly;
 	margin-top: 4em;
 	color: color(secondary);
+
+	@include screenxxs {
+		display: none;
+	}
 
 	li {
 		font-size: 20px;
@@ -38,6 +55,10 @@
 hr.solid {
 	border-top: 2px solid black;
 	margin-bottom: 2rem;
+
+	@include screenxxs {
+		border: none;
+	}
 }
 
 .searchRestaurant {
@@ -47,16 +68,31 @@ hr.solid {
 	justify-content: center;
 	align-items: center;
 
+	@include screenxxs {
+		width: 100%;
+	}
+
 	input {
 		width: 35%;
 		height: 40px;
 		font-size: 25px;
+
+		@include screenxxs {
+			font-size: 18px;
+			width: 280px;
+		}
 	}
 
 	i {
 		position: absolute;
 		margin-left: 17em;
 		font-size: 40px;
+
+		@include screenxxs {
+			font-size: 30px;
+			right: 10px;
+			color: white;
+		}
 	}
 }
 

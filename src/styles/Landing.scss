@@ -1,4 +1,5 @@
 @import "./colors.scss";
+@import "./responsive/breakpoints.scss";
 
 .landingWrapper {
 	height: 100%;
@@ -7,11 +8,16 @@
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
+
 	.landing-title {
 		margin-top: 5em;
 		font-size: 40px;
 		text-transform: uppercase;
 		color: color(secondary);
+
+		@include screenxxs {
+			font-size: 28px;
+		}
 	}
 
 	.landingSearchBarWrapper {
@@ -21,9 +27,19 @@
 		margin-top: calc(2em + 2rem);
 		margin-bottom: 10em;
 
+		@include screenxxs {
+			margin-bottom: 0;
+		}
+
 		span {
 			font-size: 18px;
 			color: color(secondary);
+
+			@include screenxxs {
+				width: 100%;
+				text-align: center;
+				font-size: 15px;
+			}
 		}
 
 		.landingSearchBarInput {
@@ -33,6 +49,11 @@
 			align-items: center;
 			justify-content: space-between;
 
+			@include screenxxs {
+				width: 85%;
+				justify-content: center;
+			}
+
 			.locationButton {
 				margin-top: 1rem;
 				width: 75px;
@@ -41,9 +62,17 @@
 				background: color(secondary);
 				border: 1px solid color(button-border);
 
+				@include screenxxs {
+					width: 30px;
+				}
+
 				i {
 					font-size: 35px;
 					color: color(button-text);
+
+					@include screenxxs {
+						font-size: 18px;
+					}
 				}
 			}
 
@@ -54,19 +83,28 @@
 				font-size: 18px;
 				border-left: 0px;
 				border-right: 0px;
+
+				@include screenxxs {
+					width: 100%;
+					font-size: 15px;
+				}
 			}
 
 			.inputButton {
 				right: 0;
 				width: 150px;
 				height: calc(5vh + 5px);
-				border: 1px solid color(button-border);
 				border-bottom-right-radius: 500px;
 				border-top-right-radius: 500px;
 				font-size: 25px;
 				margin-top: 1rem;
-				color: color(button-text);
-				background: color(secondary);
+				color: color(secondary);
+				background: color(primary);
+
+				@include screenxxs {
+					width: 60px;
+					font-size: 15px;
+				}
 
 				&:hover {
 					background: color(button-hover);

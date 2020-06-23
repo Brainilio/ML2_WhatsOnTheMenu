@@ -1,9 +1,14 @@
 @import "./variables/colors.scss";
+@import "./responsive/breakpoints.scss";
 
 .restaurant-header {
 	font-size: 40px;
 	text-align: center;
 	color: color(secondary);
+
+	@include screenxxs {
+		font-size: 28px;
+	}
 }
 
 .restaurant-items-wrapper {
@@ -27,6 +32,11 @@
 		margin-top: 1em;
 		margin-bottom: 1em;
 		background-color: color(secondary);
+
+		@include screenxxs {
+			font-size: 15px;
+			width: 90%;
+		}
 
 		.item_name {
 			margin-top: 8px;
